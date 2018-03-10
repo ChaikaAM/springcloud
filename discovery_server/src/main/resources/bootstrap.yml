@@ -1,0 +1,19 @@
+###bootstrap configurations of discovery server
+#All other properties should be got from config server according to configuration management pattern
+
+spring:
+  application:
+    name: discovery_server
+
+server:
+      port: 9000
+
+eureka:
+  client:
+    register-with-eureka: false   #no other eureka instances in demo project
+    fetch-registry: false         #no registry fetching from other eureka instances
+
+#In demo project we dont use security so these options should be false (for example to /refresh (POST) configs)
+management:
+  security:
+    enabled: false
