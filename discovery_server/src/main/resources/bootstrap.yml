@@ -4,16 +4,8 @@
 spring:
   application:
     name: discovery_server
-
-server:
-      port: 9000
-
-eureka:
-  client:
-    register-with-eureka: false   #no other eureka instances in demo project
-    fetch-registry: false         #no registry fetching from other eureka instances
-
-#In demo project we dont use security so these options should be false (for example to /refresh (POST) configs)
-management:
-  security:
-    enabled: false
+#   to use configs from config server it should be launched first
+  cloud:
+    config:
+      uri: http://localhost:8888    #config server uri
+      fail-fast: true               #fail if properties could not be fetched

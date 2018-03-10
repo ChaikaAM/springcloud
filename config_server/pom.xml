@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>discovery_server</artifactId>
+    <artifactId>config_server</artifactId>
     <version>0.9</version>
     <packaging>jar</packaging>
 
-    <name>discovery_server</name>
-    <description>Discovery-server (service-registry) for Spring Cloud</description>
+    <name>config_server</name>
+    <description>Server for configuration management in Spring Cloud</description>
 
     <parent>
         <groupId>com.github.chaikaam</groupId>
@@ -19,13 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-        </dependency>
-
-        <!--starter for receiving properties from configuration server-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
 
