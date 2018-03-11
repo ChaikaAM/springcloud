@@ -20,6 +20,7 @@
         <module>discovery_server</module>
         <module>config_server</module>
         <module>highloaded_microservice</module>
+        <module>loadbalancing_ribbon</module>
     </modules>
 
     <parent>
