@@ -1,5 +1,13 @@
 # springcloud
 
+## Part 4.2
+Feign based load balancing microservice is provided. Launch config server, discovery server, some instances of highloaded_microservice module and finally:
+
+``mvn -pl loadbalancing_feign clean spring-boot:run``
+
+Ensure that load balancing works by `GET host/delegate` and you will see answers from different highloaded_microservice module instances
+
+
 ## Part 4.1
 Ribbon based load balancing microservice is provided. Launch config server, discovery server, some instances of highloaded_microservice module and finally:
 
