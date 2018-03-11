@@ -1,0 +1,15 @@
+greeting: Hello! I am highloaded microserver. I am connected to discovery server and use configs from configurations server, I need to be scaled.
+
+eureka:
+  client:
+     registerWithEureka: true
+     fetchRegistry: true
+     serviceUrl:
+      defaultZone: http://127.0.0.1:9000/eureka
+  instance:
+    leaseRenewalIntervalInSeconds: 2  #heartbit interval in seconds. Default - 30
+    leaseExpirationDurationInSeconds: 10 #time for eureka to wait if heartbit absents. Default - 90
+
+management:
+  security:
+    enabled: false

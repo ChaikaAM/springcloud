@@ -9,6 +9,8 @@ eureka:
     fetch-registry: false         #no registry fetching from other eureka instances
     serviceUrl:
       defaultZone: http://127.0.0.1:9000/eureka    #in order not to prevent autocreating replica at 8761
+  server:
+    eviction-interval-tim er-in-ms: 1000  #scheduled interval to remove dead instanses
 
 #In demo project we dont use security so these options should be false (for example to /refresh (POST) configs)
 management:

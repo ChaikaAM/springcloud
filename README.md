@@ -1,5 +1,15 @@
 # springcloud
 
+## Part 3
+Microservice is provided.
+Start configuration server and discovery server and only after that launch microservice by
+
+``mvn -pl highloaded_microservice clean spring-boot:run``
+
+You can scale it just by running some more instances at different ports and you can see that all of them would be connected to eureka.
+Try to shutdown one of them by `GET host/kill` (to imitate highloading case) and see that eureka evicts in some time
+
+
 ## Part 2
 
 Configuration server management is implemented (with local config files, could be switched to remote configs repository). 

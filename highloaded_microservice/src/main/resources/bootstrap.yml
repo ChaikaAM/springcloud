@@ -1,0 +1,11 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: highloaded_microservice
+  cloud:
+#   to use configs from config server it should be launched first
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
