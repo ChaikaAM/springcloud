@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: highloaded_microservice
+    name: highloaded-microservice
   cloud:
 #   to use configs from config server it should be launched first
     config:

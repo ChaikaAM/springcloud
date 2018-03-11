@@ -3,7 +3,7 @@
 
 spring:
   application:
-    name: discovery_server
+    name: discovery-server
 #   to use configs from config server it should be launched first
   cloud:
     config:
