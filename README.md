@@ -1,5 +1,13 @@
 # springcloud
 
+## Part 6
+Hystrix dashboard is provided and now it is possible to monitor state of circuits on microservice with Hystrix Dashboard inside of the browser.
+Just repeat steps described in Part 4 and gi to the next link:
+
+``http://host:5003/hystrix``
+
+If you have any problems with displaying streams at your browser just go directly to `http://127.0.0.1:5003/hystrix/monitor?stream=127.0.0.1%3A5003%2Fhystrix.stream&delay=5000&title=Spring%20Cloud%20Hystrix%20Dashboard`
+
 ## Part 5
 Hystrix circuit breaker implementation is provided. Just launch config server, discovery server and finally:
 
