@@ -1,0 +1,27 @@
+greeting: Hello! I am Zuul
+
+server:
+  port: 9999
+
+spring:
+  application:
+    name: zuul-api-gateway
+
+
+eureka:
+  client:
+     registerWithEureka: true
+     fetchRegistry: true
+     serviceUrl:
+      defaultZone: http://127.0.0.1:9000/eureka
+
+zuul:
+#  ignored-services: '*'    option to ignore automapping services
+  routes:
+    users:
+      path: /service/**
+      serviceId: highloaded-microservice
+
+management:
+  security:
+    enabled: false    #to has access in demo-projects for service endpoints e.g. /routes

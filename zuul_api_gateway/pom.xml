@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>zuul_api_gateway</artifactId>
+    <version>0.9</version>
+    <packaging>jar</packaging>
+
+    <name>zuul_api_gateway</name>
+    <description>Test routing service based on Zuul</description>
+
+
+    <parent>
+        <groupId>com.github.chaikaam</groupId>
+        <artifactId>springcloud</artifactId>
+        <version>0.9</version>
+    </parent>
+
+    <dependencies>
+        <!--eureka client starter-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <!--zuul starter-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
+
+        <!--hystrix dashboard-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

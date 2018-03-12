@@ -1,5 +1,23 @@
 # springcloud
 
+## Part 7
+API Gateway is provided.
+Intelligent routing microservice based on Zuul (Netflix OSS) is added to project.
+Launch config server at first, discovery server and some instances of highloaded_microservice and then execute:
+
+``mvn -pl routing clean spring-boot:run``
+
+You can easily assume that reverse-proxy works fine just by simple check (all routes could be checked by `GET host:9999/routes`):
+
+`GET host:9999/highloaded-microservice/about` automapped service route
+ 
+`GET host:9999/service/about` described in properties file route to service
+
+All request via routes to services are automatically load-balanced by Ribbon (you can see different ports in responses from request to request).
+Circuit breaker is also works and in case of any circuit openings requests to this instance will be delegated to other instances until it became closed again
+``http://127.0.0.1:9999/hystrix/monitor?stream=127.0.0.1%3A9999%2Fhystrix.stream`` 
+
+
 ## Part 6
 Hystrix dashboard is provided and now it is possible to monitor state of circuits on microservice with Hystrix Dashboard inside of the browser.
 Just repeat steps described in Part 4 and gi to the next link:

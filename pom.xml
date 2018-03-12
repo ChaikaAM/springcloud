@@ -23,6 +23,7 @@
         <module>loadbalancing_ribbon</module>
         <module>loadbalancing_feign</module>
         <module>circuit_breaker</module>
+        <module>zuul_api_gateway</module>
     </modules>
 
     <parent>
