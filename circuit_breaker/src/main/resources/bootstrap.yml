@@ -1,0 +1,24 @@
+greeting: Hello! I am test microserver with circuit breaker
+
+server:
+  port: 5003
+
+spring:
+  application:
+    name: microservice-with-circuit-breaker
+
+
+eureka:
+  client:
+     registerWithEureka: true
+     fetchRegistry: true
+     serviceUrl:
+      defaultZone: http://127.0.0.1:9000/eureka
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000   #default timeout

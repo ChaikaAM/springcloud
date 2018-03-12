@@ -1,5 +1,15 @@
 # springcloud
 
+## Part 5
+Hystrix circuit breaker implementation is provided. Just launch config server, discovery server and finally:
+
+``mvn -pl circuit_breaker clean spring-boot:run``
+
+There are two ways to observer this pattern behavior:
+* do `GET host/task/hard` several times and you will see that fallback method would be executed in order to prevent cascading failures and make service more fault-tolerant
+* do `GET host/task/long` and you will see observe fallback method again because request handling became too long
+* play with `timeoutInMilliseconds` hystrix parameter and see what happens to `GET host/task/long`  
+
 ## Part 4.2
 Feign based load balancing microservice is provided. Launch config server, discovery server, some instances of highloaded_microservice module and finally:
 
